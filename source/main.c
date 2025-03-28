@@ -2,12 +2,13 @@
 // #include <stdlib.h>
 // #include <string.h>
 // #include <unistd.h>
-#include <arpa/inet.h>
+// #include <arpa/inet.h>
 
 #include "ps4.h"
 
 #define PORT 2323
 #define BUFFER_SIZE 1024
+#define	INADDR_ANY		((in_addr_t)0x00000000)
 
 void handle_client(int client_socket) {
     char buffer[BUFFER_SIZE];
