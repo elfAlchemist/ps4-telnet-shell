@@ -1,8 +1,8 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-#include <unistd.h>
-#include <arpa/inet.h>
+// #include <stdio.h>
+// #include <stdlib.h>
+// #include <string.h>
+// #include <unistd.h>
+// #include <arpa/inet.h>
 
 #include "ps4.h"
 
@@ -25,13 +25,13 @@ void handle_client(int client_socket) {
             break;
         }
         
-        fp = popen(buffer, "r");
-        if (fp) {
-            while (fgets(buffer, BUFFER_SIZE, fp) != NULL) {
-                send(client_socket, buffer, strlen(buffer), 0);
-            }
-            pclose(fp);
-        }
+        // fp = popen(buffer, "r");
+        // if (fp) {
+        //     while (fgets(buffer, BUFFER_SIZE, fp) != NULL) {
+        //         send(client_socket, buffer, strlen(buffer), 0);
+        //     }
+        //     pclose(fp);
+        // }
     }
     close(client_socket);
 }
